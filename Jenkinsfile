@@ -14,7 +14,8 @@ agent any
     
      stage('Test') {
             steps {
-    bat 'mvn clean test -Dbrowsername=${params.browsername}'        
+   // bat 'mvn clean test -Dbrowsername=${params.browsername}'     
+   echo "${params.browsername}" 
 
     }
  
