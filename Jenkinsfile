@@ -1,6 +1,11 @@
 pipeline {
 
 agent any
+
+
+ parameters {
+     
+ }
  
  tools { 
       maven 'Maven3.9.6' 
@@ -13,7 +18,7 @@ agent any
     
      stage('Test') {
             steps {
-    bat 'mvn clean test -Dbrowsername=${browsernaame}'        
+    bat 'mvn clean test -Dbrowsername=${params.browsername}'        
 
     }
  
