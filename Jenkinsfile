@@ -2,10 +2,6 @@ pipeline {
 
 agent any
 
-
- parameters {
-     
- }
  
  tools { 
       maven 'Maven3.9.6' 
