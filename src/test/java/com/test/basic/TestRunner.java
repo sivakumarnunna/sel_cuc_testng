@@ -20,7 +20,7 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 	@Override
 	@DataProvider(parallel = false)
 	public Object[][] scenarios() {
-	    boolean parallelExecution = Boolean.parseBoolean(System.getProperty("parallelExecution", "false"));
+	    boolean parallelExecution = Boolean.parseBoolean(System.getenv("parallelExecution"));
 	    return parallelExecution ? super.scenarios() : new Object[0][0];
 	}
 
