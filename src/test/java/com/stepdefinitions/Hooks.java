@@ -18,12 +18,12 @@ import io.cucumber.java.Status;
 public class Hooks {
 	
 	SeleniumUtils seleniumUtils = new SeleniumUtils();
-	
+
 	@Before
 	public void setup(Scenario scenario) throws FileNotFoundException, IOException {
 		System.out.println("Scenario started :: " +scenario.getName());
 		
-		DriverManager.setDriver(ConfigReader.getProperty("browser"));
+		DriverManager.setDriver();
 	}
 	@After
 	public void tearDown(Scenario scenario) throws IOException {

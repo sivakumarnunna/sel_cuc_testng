@@ -18,16 +18,18 @@ import io.cucumber.testng.CucumberOptions;
 public class TestRunner extends AbstractTestNGCucumberTests {
 
 	@Override
-	@DataProvider(parallel = true)
+	@DataProvider(parallel = false)
 	public Object[][] scenarios() {
 		return super.scenarios();
 	}
 
-	@BeforeTest
-	@Parameters({ "browser" })
-	public void defineBrowser(String browser) throws FileNotFoundException, IOException {
-
-		ConfigReader.setProperty("browser", browser);
-	}
+	/*
+	 * @BeforeTest
+	 * 
+	 * @Parameters({ "browser" }) public void defineBrowser(String browser) throws
+	 * FileNotFoundException, IOException {
+	 * 
+	 * ConfigReader.setProperty("browser", browser); }
+	 */
 
 }

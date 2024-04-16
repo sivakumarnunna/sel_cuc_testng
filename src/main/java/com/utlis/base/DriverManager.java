@@ -15,15 +15,14 @@ public class DriverManager {
 
 	private static DriverManager drivermanager = null;
 	private static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
-
-	private DriverManager(String browsername) {
+	String browsername=System.getProperty("browsername");
+	private DriverManager() {
 		
-		
+		   
 
 		if (browsername.equalsIgnoreCase("chrome")) {
 			ChromeOptions chromeoptions = new ChromeOptions();
 			driver.set(new ChromeDriver(chromeoptions));
-			System.out.println("opening the browser session "+browsername);
 		} else if (browsername.equalsIgnoreCase("firefox")) {
 			FirefoxOptions options = new FirefoxOptions();
 			driver.set(new FirefoxDriver(options));
@@ -49,9 +48,9 @@ public class DriverManager {
 		driver.get().get(url);
 	}
 
-	public static void setDriver(String browser) {
+	public static void setDriver() {
 		if (drivermanager == null) {
-			new DriverManager(browser);
+			new DriverManager();
 		} else {
 			System.out.println("Already driver is referring to" + getDriver().getClass());
 		}
