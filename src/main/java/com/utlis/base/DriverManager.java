@@ -18,7 +18,7 @@ public class DriverManager {
 	String browsername=System.getProperty("browsername");
 	private DriverManager() {
 		
-		   
+		   System.out.println("Browser is .... "+ browsername);
 
 		if (browsername.equalsIgnoreCase("chrome")) {
 			ChromeOptions chromeoptions = new ChromeOptions();
