@@ -9,12 +9,7 @@ agent any
        
     stages {
     
-      stage('Checkout') {
-            steps {
-                // Checkout your code from version control
-                git clone 'https://github.com/sivakumarnunna/sel_cuc_testng.git'
-            }
-        }
+    
     
      stage('Test') {
             steps {
