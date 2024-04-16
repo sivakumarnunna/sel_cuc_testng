@@ -26,17 +26,11 @@ public class DriverManager {
 		} else if (browsername.equalsIgnoreCase("firefox")) {
 			FirefoxOptions options = new FirefoxOptions();
 			driver.set(new FirefoxDriver(options));
-			System.out.println("opening the browser session "+browsername);
-
 		} else if (browsername.equalsIgnoreCase("edge")) {
 			EdgeOptions edgeOptions = new EdgeOptions();
 			driver.set(new EdgeDriver(edgeOptions));
-			System.out.println("opening the browser session "+browsername);
-
 		}
 		driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		System.out.println("Browser is " + browsername);
-
 		System.out.println("Thread is " + Thread.currentThread());
 	}
 
