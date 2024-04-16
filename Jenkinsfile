@@ -13,7 +13,7 @@ agent any
     
      stage('Test') {
             steps {
-bat 'mvn clean test'        
+    bat 'mvn clean test -Dbrowsername=${browsernaame}'        
 
     }
  
