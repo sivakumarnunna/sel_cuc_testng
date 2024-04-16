@@ -12,7 +12,7 @@ agent any
       stage('Checkout') {
             steps {
                 // Checkout your code from version control
-                git 'https://github.com/your/repository.git'
+                git clone 'https://github.com/sivakumarnunna/sel_cuc_testng.git'
             }
         }
     
