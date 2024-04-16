@@ -16,7 +16,7 @@ agent any
             steps {
                echo "${params.browsername}" 
             
-    bat "mvn clean test -Dbrowsername=${params.browsername}"     
+    bat "mvn clean test -Dbrowsername=${params.browsername} -DparallelExecution=${params.parallelExecution} -Ddataproviderthreadcount=${params.dataproviderthreadcount}"     
 
     }
  
