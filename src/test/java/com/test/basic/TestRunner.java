@@ -38,7 +38,7 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 			total = total + data;
 		}
 
-		String htmlContent = "<html><body>  <h3>Execution Summary</h3>\n" + "<table border='1'><tr>"
+		String htmlContent = "<html><body>  <h3>Execution Summary</h3>\n" + "<h4>Browser  - "+ConfigReader.getProperty("browsername")+" </h4>\n"+ "<table border='1'><tr>"
 				+ "<th>Total Testcases</th>" + "<th>passed</th>" + "<th>Failed</th>" + "<th>skipped</th>" + "<tr>"
 				+ "<td>" + ConfigReader.getProperty("totalScenarios") + "</td>" + "<td>"
 				+ ConfigReader.getProperty("passed") + "</td>" + "<td>" + ConfigReader.getProperty("failed") + "</td>"
