@@ -43,9 +43,7 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 				+ "<td>" + ConfigReader.getProperty("totalScenarios") + "</td>" + "<td>"
 				+ ConfigReader.getProperty("passed") + "</td>" + "<td>" + ConfigReader.getProperty("failed") + "</td>"
 				+ "<td>" + ConfigReader.getProperty("skipped") + "</td>" + "</tr>" + "</table>"
-
 				+ "<table border='1'>" + total+ "</table>"
-
 				+ "	  <h4>Please find attached test report for more details</h4>\n" + "</body></html>";
 
 		String attachment = FileUtils.getFile(new File(System.getProperty("user.dir")),

@@ -48,7 +48,7 @@ public class Hooks {
 		DriverManager.setDriver();
 	}
 	 @After
-	    public static void tearDown(Scenario scenario) {
+	    public static void tearDown(Scenario scenario) throws IOException {
 	    	
 	    	
 	    	result.put(scenario.getName(), scenario.getStatus().toString());
@@ -66,7 +66,7 @@ public class Hooks {
 	        //validate if scenario has failed
 	        if(scenario.isFailed()) {
 	        	failed=failed+1;
-	            final byte[] screenshot = ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);
+	            final byte[] screenshot = SeleniumUtils.takeScreenShotasBytes(DriverManager.getDriver());
 	            scenario.attach(screenshot, "image/png", scenario.getName()); 
 	        }   
 	     
