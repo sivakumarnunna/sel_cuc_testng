@@ -12,7 +12,7 @@ agent any
      stage('Test') {
             steps {
     echo "${params.browsername}" 
-    bat "mvn clean test -Dbrowsername=${params.browsername} -Dcucumber.filter.tags=${params.tags} -Ddataproviderthreadcount=${params.dataproviderthreadcount}"  
+    bat "mvn clean test -Dbrowsername=${params.browsername} -Dcucumber.filter.tags=@${params.tags} -Ddataproviderthreadcount=${params.dataproviderthreadcount}"  
     }
     }
  }
