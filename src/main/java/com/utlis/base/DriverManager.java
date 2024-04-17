@@ -15,7 +15,7 @@ public class DriverManager {
 
 	private static DriverManager drivermanager = null;
 	private static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
-	String browsername=System.getProperty("browsername");
+	String browsername=ConfigReader.getProperty("browsername");
 	private DriverManager() {
 		
 		   System.out.println("Browser is .... "+ browsername);

@@ -11,9 +11,10 @@ import java.util.*;
 
 public class EmailSender {
 
+    final static String senderEmail = ConfigReader.getProperty("email_sender");
+    final static String senderPassword = ConfigReader.getProperty("password");
+
     public static void sendEmail(String recipientEmail, String subject, String htmlContent, String reportFilePath) {
-        final String senderEmail = ConfigReader.getProperty("fromemail");
-        final String senderPassword = ConfigReader.getProperty("password");
 
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
@@ -63,9 +64,8 @@ public class EmailSender {
     }
 
     public static void sendEmailWithBody(String recipientEmail, String subject, String body, String reportFilePath) {
-        final String senderEmail = "nunnacvakumar@gmail.com";
-        final String senderPassword = "oucj ejro jtyq ultd";
-
+        
+    	recipientEmail=ConfigReader.getProperty("mail_recivers");
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
