@@ -18,10 +18,10 @@ import io.cucumber.testng.CucumberOptions;
 public class TestRunner extends AbstractTestNGCucumberTests {
 
 	@Override
-	@DataProvider(parallel = false)
+	@DataProvider(parallel = true)
 	public Object[][] scenarios() {
-	    boolean parallelExecution = Boolean.parseBoolean(System.getenv("parallelExecution"));
-	    return parallelExecution ? super.scenarios() : new Object[0][0];
+		// TODO Auto-generated method stub
+		return super.scenarios();
 	}
 
 	/*
