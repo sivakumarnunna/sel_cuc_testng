@@ -42,7 +42,7 @@ public class OrangeHRMTest {
     public void verifyLogin() {
   
         // Verify home page
-        Assert.assertTrue(objHomePage.getHomePageText().contains("Dashboard"));
+        Assert.assertTrue(objHomePage.getHomePageText().contains("Dashboard"),"Dashboard tab not found");
   
     }
      
@@ -63,13 +63,13 @@ public class OrangeHRMTest {
     @Then("User should be able to see LinkedIn Icon")
     public void verifyLinkedInIcon( ) {
          
-        Assert.assertTrue(objLogin.getLinkedInIcon());
+        Assert.assertTrue(objLogin.getLinkedInIcon(),"Linkedin icon not found");
     }
      
     @Then("User should be able to see FaceBook Icon")
     public void verifyFaceBookIcon( ) {
          
-        Assert.assertTrue(objLogin.getFaceBookIcon());
+        Assert.assertTrue(objLogin.getFaceBookIcon(),"Facebook icon not found");
     }
      
     @Then("User should navigate to a new page")
