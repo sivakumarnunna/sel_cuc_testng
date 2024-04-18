@@ -69,7 +69,6 @@ public class Hooks {
 	            final byte[] screenshot = SeleniumUtils.takeScreenShotasBytes(DriverManager.getDriver());
 	            scenario.attach(screenshot, "image/png", scenario.getName()); 
 	        }   
-	     
 	        DriverManager.close();
 	    }
 	    

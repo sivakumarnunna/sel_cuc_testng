@@ -44,7 +44,7 @@ public class DriverManager {
 
 	public static void setDriver() {
 		if (drivermanager == null) {
-			new DriverManager();
+			drivermanager =new DriverManager();
 		} else {
 			System.out.println("Already driver is referring to" + getDriver().getClass());
 		}
