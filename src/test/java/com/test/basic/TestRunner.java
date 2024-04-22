@@ -17,7 +17,7 @@ import com.stepdefinitions.Hooks;
 import com.utlis.base.EmailSender;
 
 @CucumberOptions(features = "src/test/resources/features/sample.feature", glue = "com.stepdefinitions", plugin = {
-		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" })
+		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","rerun:target/failedrerun.txt" })
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 
