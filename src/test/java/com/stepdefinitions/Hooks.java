@@ -36,7 +36,7 @@ public class Hooks {
 	 @BeforeAll
 	 public static void before_all() throws IOException {
 		 
-		 ConfigReader.readProperties();
+		 //ConfigReader.readProperties();
 		FileUtils.deleteFiles(new File(System.getProperty("user.dir")),"ExtentReports");
 	    
 	 }

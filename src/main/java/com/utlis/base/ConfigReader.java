@@ -14,7 +14,7 @@ public class ConfigReader {
 
 	public static Properties properties = null;
 
-	public static void readProperties() {
+   static  {
 		properties = new Properties();
 		try {
 			properties.load(new FileInputStream("src/test/resources/config.properties"));

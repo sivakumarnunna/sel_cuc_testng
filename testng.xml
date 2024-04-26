@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="SmokeSuite">
 
+<listeners>
+
+<listener class-name="com.test.basic.AnnotationTransformer">
+</listener>
+
+
+</listeners>
+
 	<test name="smoke Test - ${browsername}">
 		<classes>
 			<class name="com.test.basic.TestRunner" />
